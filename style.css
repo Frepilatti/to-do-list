@@ -1,0 +1,139 @@
+.tasker ul, 
+.tasker li, 
+.tesker button, 
+.tesker input, 
+.tasker .error {
+
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.tasker-header button,
+.tasker-body, 
+.task button {
+    transition: all 0.2s ease;
+/*    -webkit-transition: all 0.2s ease;*/
+}
+
+body {
+    background: #f1f1f1;
+    margin-top: 3rem;
+}/* define  o fundo da tela como branco um pouco mais escuro
+    e uma margem de 3rem na parte superior*/
+
+/*PEN STYLES*/
+.tasker {
+    max-width: 400px;
+    margin: 0 auto;
+}/* Define o tasker e tudo dentro dele com a largura de 400px
+    margens automáticas na esquerda e na direita e
+    para centralizar o bloco horizontalmente na tela.*/
+
+.tasker .error{
+    display: none;
+    background: rgba(237, 28, 36, 0.7);
+    color: #fff;
+    padding: 14px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-align: center;
+}/* Define que o display da parte do erro ficara invisivel
+    quando aparecer a cor do fundo sera vermelho
+    com escrita branco
+    com 14 px de distancia em cima e em baixo entre o texto e o fim do retangulo
+    com uma margem de 5px (distancia entre a parte do input)
+    com os cantos arredondados em 5px
+    e o texto centralizado*/
+.tasker ul {
+    background: #fff;
+}/* Arruma o fundo das linhas de tarefas para cor selecionada*/
+     
+.tasker li,
+.tasker .error,
+.tasker button,
+.tasker input {
+    font: 18px/1.25em Helvetica, Arial, Sans-serif;
+}/*Define a fonte para todos os textos*/
+     
+.tasker-header {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: -moz-inline-box;
+    display: inline-flex;
+    background: #313e50;
+    -webkit-box-pack: justify;
+        justify-content: space-between;
+    width: 100%;
+}/* Define os display para funcionar em cada um dos browser
+    com inline input e o botao vao ficar na mesma linha
+    define a cor do fundo */
+
+.tasker-header input{
+    background: #313e50;
+}
+
+.tasker-header input,
+.tasker-header button {
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  padding: 14px;
+}/* define a cor do texto digitado para branco
+    box-sizing da a opção de colocar o padding e border dentro do valor total de largura e comprimento
+    border-box coloca o padding e border no valor total do quadro e nao vai mudar de tamando */
+
+.tasker-header input {
+    -webkit-box-flex: 2;
+        flex-grow: 2;
+}/* define a flexibilidade do input*/
+
+.tasker-header button {
+    background: #1dd2af;
+    border: 1px solid #1eddb8;
+}/*define a cor de fundo do botao e o tamanho e cor da borada esquerda*/
+
+.tasker-header button:hover {
+    background: #20e7c1;
+}/*define a cor do botao quando o mouse esta em cima dele*/
+
+.tasker-body .task {
+    display: block;
+    position: relative;
+    padding: 14px 40px 14px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}   /*display block faz comecar sempre em uma nova linha
+    O position relative posiciona o elemento em relação a si mesmo. 
+    Ou seja, o ponto zero será o canto superior esquerdo, e ele começará a contar a partir dali.
+    padding define os preenchimentos de cada parte
+    border-bottom define a margem de baixo */
+
+.tasker-body .task:hover > button {
+    opacity: 1;
+}/* define a opacidade da tarefa quando o mouse esta em cima*/
+
+.tasker-body .task.completed {
+    color: #cdcdcd;
+    text-decoration: line-through;
+}/*////////////////////////////////////////////////////////////////////////////////////*/
+
+.tasker-body .task input {
+    margin-right: 10px;
+}/*coloca margem nos textos de input das tarefas*/
+
+.tasker-body .task button {
+    color: #cdcdcd;
+    margin: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}/*////////////////////////////////////////////////////////////////////////////////////*/
+
+.tasker-body .task button:hover {
+    color: #ed1c24;
+}/*////////////////////////////////////////////////////////////////////////////////////*/
+  
+
